@@ -14,9 +14,9 @@
 <li> Authenticate USING CLI : Download Azure CLI and Install</li>
 <li>Install VS code plugin: azure terraform by microsoft</li>
 <li>Install VS code plugin: Terraform by Hashicorp</li>
-<li><text> login with command : az login</text></li>
-<li>terraform init</li>
-<li>terraform Plan</li>
-<li>terraform Apply</li>
-<li>terrform destroy</li>
+<li><text> login with command :<code> az login</code></text></li>
+<li><code> terraform init </code></li>
+<li><code>terraform Plan</code></li>
+<li><code>terraform Apply</code></li>
+<li><code>terrform destroy</code></li>
 </ul>
