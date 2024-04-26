@@ -1,19 +1,20 @@
 variable "ARM_SUBSCRIPTION_ID" {
-  default     = "c236257f-1483-4eb8-a335-52d37d67b08e"
   description = "Azure Subscription Id"
 }
 
 variable "prefix" {
-  default = "STELLA"
+  description = "Prefix mostry application initials"
+  #default = "STELLA"
 }
 variable "RESOURCE_LOCATION" {
-    default = "Centralus"
+  description = "Location eastus,entralus"
+    #default = "Centralus"
 }
 
 variable "APP_ENV" {
-  default = "Dev"
+  description = "Environment name"
+  #default = "Dev"
 }
 variable "APP_NAME" {
-    default = "StellaEnterprise"
-  
+  description = "Application name"  
 }

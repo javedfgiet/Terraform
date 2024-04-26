@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_virtual_network" "vn" {
   name                = "${var.APP_NAME}-${var.APP_ENV}-${var.RESOURCE_LOCATION}-network"
-  address_space       = ["10.0.0.0/16"]
+  address_space       = ["10.128.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
@@ -20,7 +20,7 @@ resource "azurerm_subnet" "subnet" {
   name                 = "${var.APP_NAME}-subnet"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vn.name
-  address_prefixes     = ["10.0.2.0/24"]
+  address_prefixes     = ["10.128.1.0/24",]
 }
 resource "azurerm_public_ip" "az-vm-ip" {
   name                    = "${var.APP_NAME}-${var.APP_ENV}-publicip"
@@ -80,7 +80,7 @@ resource "azurerm_linux_virtual_machine" "linux-dev-vm" {
   source_image_reference {
     offer     = var.linux_vm_image_offer
     publisher = var.linux_vm_image_publisher
-    sku       = var.rhel_8_5_sku
+    sku       = var.rhel_sku_image
     version   = "latest"
   }
 }
